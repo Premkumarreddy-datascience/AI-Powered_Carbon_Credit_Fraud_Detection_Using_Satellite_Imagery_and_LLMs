@@ -10,7 +10,7 @@
 
 ## 📑 Table of Contents
 
-- [About the Project](#about-the-project)
+- [About the Project](#About-the-Project)
 - [Problem Statement](#problem-statement)
 - [Project Objectives](#project-objectives)
 - [Key Features](#key-features)
