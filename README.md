@@ -43,7 +43,7 @@ The system is designed to be:
 
 ---
 
-## ❗ Problem Statement
+## Problem Statement
 
 Carbon offset projects often claim forest preservation or regeneration, but:
 - Satellite evidence is not always systematically analyzed
@@ -55,7 +55,7 @@ Carbon offset projects often claim forest preservation or regeneration, but:
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 This project analyzes multi-temporal satellite vegetation data to:
 1. Measure forest health and cover using vegetation indices
@@ -68,16 +68,16 @@ Synthetic satellite data is used to demonstrate the full end-to-end pipeline in 
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🌍 Satellite-based land monitoring
-- 🌳 NDVI, EVI, NDWI vegetation analysis
-- 🔄 Before–After temporal change detection
-- 🧠 AI-based anomaly detection (Isolation Forest)
-- 📐 Boundary & grid-pattern fraud detection
-- 📊 Fraud risk scoring (0–1 scale)
-- 📈 Rich visual dashboards & heatmaps
-- 📓 End-to-end Jupyter Notebook pipeline
+- Satellite-based land monitoring
+- NDVI, EVI, NDWI vegetation analysis
+- Before–After temporal change detection
+- AI-based anomaly detection (Isolation Forest)
+- Boundary & grid-pattern fraud detection
+- Fraud risk scoring (0–1 scale)
+- Rich visual dashboards & heatmaps
+- End-to-end Jupyter Notebook pipeline
 
 ---
 
@@ -85,15 +85,15 @@ Synthetic satellite data is used to demonstrate the full end-to-end pipeline in 
 
 | Component            | Technology |
 |---------------------|------------|
-| **Language**         | Python 3.10 |
-| **IDE / Platform**  | Jupyter Notebook |
-| **Satellite Tools** | Sentinel Hub, Google Earth Engine |
+| **Programming Language**         | Python 3.10 |
+| **Data Processing**  | NumPy, Pandas |
+| **Visualization** | Matplotlib, Seaborn |
 | **Geospatial**      | GeoPandas, Rasterio, Shapely |
-| **Image Processing**| OpenCV, scikit-image |
-| **ML Models**       | Isolation Forest |
-| **Visualization**   | Matplotlib, Seaborn, Plotly |
-| **Environment**     | Conda / Virtualenv |
-| **Standards**       | Reproducible research, modular design |
+| **Satellite APIs**| Sentinal Hub, Google Earth Engine |
+| **Computer Vision**       | OpenCV, scikit-image |
+| **Machine Learning**   | scikit-learn(Isolation Forest), PyTorch |
+| **Notebooks**     | Jupyter Notebook |
+| **Utilities**       | python-dotenv, tqdm |
 
 ---
 
