@@ -30,7 +30,7 @@
 
 ---
 
-## 🌿 About the Project
+## About the Project
 
 Carbon credit systems rely heavily on verified forest conservation and regeneration. However, fraudulent practices such as false afforestation claims, manipulated land boundaries, and unreported deforestation undermine the credibility of these systems.
 
