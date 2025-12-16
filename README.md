@@ -10,7 +10,7 @@
 
 ## 📑 Table of Contents
 
-- [About the Project](#About-the-Project)
+- [About the Project](#about-the-project)
 - [Problem Statement](#problem-statement)
 - [Project Objectives](#project-objectives)
 - [Key Features](#key-features)
@@ -57,11 +57,14 @@ Carbon offset projects often claim forest preservation or regeneration, but:
 
 ## 🎯 Project Objectives
 
-- Detect deforestation using satellite-derived vegetation indices
-- Identify suspicious spatial and temporal patterns
-- Quantify fraud risk using AI-based scoring
-- Provide explainable, visual, and auditable results
-- Enable scalable, repeatable monitoring without ground surveys
+This project analyzes multi-temporal satellite vegetation data to:
+1. Measure forest health and cover using vegetation indices
+2. Detect deforestation and abrupt changes
+3. Identify suspicious spatial patterns
+4. Quantify fraud risk using a weighted scoring mechanism
+5. Generate interpretable visual dashboards and reports
+
+Synthetic satellite data is used to demonstrate the full end-to-end pipeline in a reproducible and deployment-ready manner.
 
 ---
 
