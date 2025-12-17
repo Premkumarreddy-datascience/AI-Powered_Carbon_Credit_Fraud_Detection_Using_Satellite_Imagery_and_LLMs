@@ -100,7 +100,7 @@ Synthetic satellite data is used to demonstrate the full end-to-end pipeline in 
 ---
 
 ## System Architecture
-
+```
 Satellite Data
      ↓
 Vegetation Indices (NDVI, EVI, NDWI)
@@ -114,7 +114,7 @@ Fraud Pattern Analysis
 Risk Scoring Engine
      ↓
 Visualization & Report Generation
-
+```
 
 ---
 
