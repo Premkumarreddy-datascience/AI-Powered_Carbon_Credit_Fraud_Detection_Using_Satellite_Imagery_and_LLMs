@@ -1,0 +1,19 @@
+AI-Powered Carbon Credit Fraud Detection Using Satellite Imagery and LLMs\
+└── satellite_module\
+    ├── config\
+    │   ├── __init__.py
+    │   └── settings.py
+    ├── data\
+    │   ├── raw\
+    │   ├── processed\
+    │   └── outputs\
+    ├── notebooks\
+    │   └── satellite_analysis.ipynb
+    ├── src\
+    │   ├── __init__.py
+    │   ├── data_downloader.py
+    │   ├── image_processor.py
+    │   ├── change_detector.py
+    │   └── visualizer.py
+    ├── requirements.txt
+    └── .env
