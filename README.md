@@ -8,7 +8,7 @@
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [About the Project](#about-the-project)
 - [Problem Statement](#problem-statement)
@@ -179,15 +179,15 @@ The main notebook satellite_analysis.ipynb contains 17 structured cells, coverin
 
 ---
 
-## ⚙️ Installation Guide
+## Installation Guide
 
-### ✅ Prerequisites
+### Prerequisites
 
 - Python 3.10+
 - Anaconda (recommended)
 - Git
 
-### 🔧 Setup
+### Setup
 
 1. Clone the Repository
 ```bash
