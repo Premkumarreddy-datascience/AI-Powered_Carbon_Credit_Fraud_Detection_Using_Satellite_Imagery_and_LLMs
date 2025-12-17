@@ -18,15 +18,17 @@
 - [System Architecture](#system-architecture)
 - [Workflow Overview](#workflow-overview)
 - [Data Sources](#data-sources)
-- [AI & ML Techniques Used](#ai--ml-techniques-used)
-- [Fraud Detection Logic](#fraud-detection-logic)
+- [Fraud Detection Methodology](#fraud-detection-methodology)
+- [Notebook Walkthrough](#notebook-walkthrough)
 - [Installation Guide](#installation-guide)
+- [Environment Variables](#environment-variables)
 - [How to Run the Project](#how-to-run-the-project)
-- [Jupyter Notebook Execution](#jupyter-notebook-execution)
-- [Results & Outputs](#results--outputs)
+- [Outputs Generated](#outputs-generated)
+- [Results and Interpretation](#results-and-interpretation)
 - [Limitations](#limitations)
 - [Future Enhancements](#future-enhancements)
 - [Acknowledgements](#acknowledgements)
+- [Author](#author)
 
 ---
 
@@ -81,7 +83,7 @@ Synthetic satellite data is used to demonstrate the full end-to-end pipeline in 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component            | Technology |
 |---------------------|------------|
@@ -97,20 +99,26 @@ Synthetic satellite data is used to demonstrate the full end-to-end pipeline in 
 
 ---
 
-## 🧩 System Architecture
+## System Architecture
 
-1. Area of Interest (AOI) definition  
-2. Satellite data acquisition (real or synthetic)  
-3. Vegetation index computation  
-4. Forest cover segmentation  
-5. Change & deforestation detection  
-6. AI-based fraud pattern analysis  
-7. Risk scoring & reporting  
-8. Visualization & export  
+Satellite Data
+     ↓
+Vegetation Indices (NDVI, EVI, NDWI)
+     ↓
+Forest Segmentation & Metrics
+     ↓
+Change Detection (Before vs After)
+     ↓
+Fraud Pattern Analysis
+     ↓
+Risk Scoring Engine
+     ↓
+Visualization & Report Generation
+
 
 ---
 
-## 🔄 Workflow Overview
+## Workflow Overview
 
 - Load satellite imagery (multi-temporal)
 - Compute NDVI, EVI, NDWI
@@ -123,45 +131,51 @@ Synthetic satellite data is used to demonstrate the full end-to-end pipeline in 
 
 ---
 
-## 🛰️ Data Sources
+## Data Sources
 
-- Sentinel-2 Satellite Imagery
-- Google Earth Engine (optional)
-- Synthetic satellite data (for demonstration & reproducibility)
+- Sentinel-2 (simualted) for multispectral imagery
+- Synthetic NDVI-based satellite data for demostration and reproducibility
+- Configurable for real-world satellite APIs
 
-> Synthetic data ensures the project runs **without API dependency**, while preserving real-world logic.
-
----
-
-## 🤖 AI & ML Techniques Used
-
-| Technique | Purpose |
-|---------|--------|
-| NDVI / EVI / NDWI | Vegetation & water analysis |
-| Change Detection | Forest loss identification |
-| Isolation Forest | Unsupervised anomaly detection |
-| Spatial Morphology | Noise & false-positive removal |
-| Boundary Analysis | Fraud boundary manipulation detection |
-| Pattern Detection | Grid-based deforestation detection |
+> Synthetic data ensures the project runs **without API dependency**, while preserving real-world logic
 
 ---
 
-## 🚨 Fraud Detection Logic
+## Fraud Detection Methodology
 
-Fraud risk is calculated using multiple indicators:
+The fraud risk score is computed using multiple indicators:
 
-- **Abrupt vegetation loss**
-- **Boundary regularization**
-- **Grid-like clearing patterns**
-- **Spatial anomalies**
-- **Temporal inconsistency**
+| Indicator            | Description |
+|---------------------|------------|
+| **NDVI Change**         | Sudden vegetation loss |
+| **Boundary Regularity**  | Artificial boundary smoothing |
+| **Grid Pattern Score** | Planned clearing patterns |
+| **Temporal Anaomalies**      | Deviations from seasonal norms |
+| **Anamaly Detection**| Isolation Forest outliers |
 
-### 🧮 Risk Score
-- `0.0 – 0.3` → Low Risk  
-- `0.3 – 0.7` → Medium Risk  
-- `0.7 – 1.0` → High Risk  
+---
 
-Each factor is weighted and combined into a final score.
+## Notebook Walkthrough
+
+The main notebook satellite_analysis.ipynb contains 17 structured cells, covering:
+
+1. Setup and Configuration
+2. Import Project modules
+3. Intialize Modules
+4. Define Area of Interest
+5. Satellite Data generation
+6. Create Synthetic Bands
+7. Vegetation index calculation
+8. Visualize Vegetation Indices
+9. Forest Cover Analysis
+10. Visualize Forest Cover
+11. Change detection
+12. Visualize Change detection
+13. Fraud pattern detection
+14. Fraud Risk Assessment
+15. Generate Report
+16. Final Visualization Dashboard
+17. Saving Results in output folder
 
 ---
 
@@ -175,14 +189,97 @@ Each factor is weighted and combined into a final score.
 
 ### 🔧 Setup
 
+1. Clone the Repository
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/carbon-credit-fraud-detection
+git clone<repo_url>
 cd satellite_module
+```
 
-# Create environment
-conda create -n carbonfraud python=3.10
-conda activate carbonfraud
-
-# Install dependencies
+2. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
+
+---
+
+## Environment Variables
+Create a **.env** file inside **satellite_module/**:
+
+```env
+SENTINELHUB_CLIENT_ID=YOUR_CLIENT_ID
+SENTINELHUB_CLIENT_SECRET=YOUR_CLIENT_SECRET
+EARTHENGINE_TOKEN=YOUR_EE_TOKEN
+```
+
+---
+
+## How to Run the Project
+Option 1: Run via Jupyter Notebook
+```bash
+jupyter notebook
+```
+Open:
+```bash
+notebooks/satellite_analysis.ipynb
+```
+Run cells sequentially from top to bottom
+
+Option 2: Extend as a Python Pipeline
+You can integrate the modules in **src/** into a production pipeline or API.
+
+---
+
+## Outputs Generated
+After execution, the following files are saved:
+```bash
+data/outputs/
+├── ndvi_before.npy
+├── ndvi_after.npy
+├── deforestation_mask.npy
+└── analysis_dashboard.png
+```
+
+---
+
+## Results and Interpretation
+- **Forest Loss Detected**: Quantified in sq. km and %
+- **Deforestation Pattern**: Natural (non-grid)
+- **Boundary Changes**: Within normal range
+- **Overall Fraud Risk**: LOW
+- **Confidence Level**: ~87%
+Project verified - no stron fraud indicators detected.
+
+---
+
+## Limitations
+- Uses synthetic data for demonstration
+- No real-time satellite streaming
+- LLM integration currently conceptual
+- Resolution limited to simulated 30m pixels
+
+---
+
+## Future Enhancements
+- Real-time Sentinel-2 & Landsat ingestion
+- LLM-based audit report generation
+- Time-series forecasting of deforestation
+- Web dashboard (FastAPI + React)
+- Integration with carbon registries
+- Blockchain-based verification logs
+
+---
+
+## Acknowledgements:
+
+- European Space Agency (Sentinel-2)
+- Google Earth Engine
+- Open-source geospatial community
+- scikit-learn, GeoPandas, OpenCV contributors
+- Academic research on forest monitoring & carbon markets
+
+---
+
+## Author
+- K. Prem Kumar Reddy
+- M.Tech Data Science
+- Jain (Deemed-to-be) University
