@@ -1,0 +1,32 @@
+{
+  "timestamp": "04052026_211045",
+  "coords": [
+    -62.2,
+    -10.3,
+    -62.0,
+    -10.1
+  ],
+  "years": [
+    2019,
+    2022
+  ],
+  "country": "Brazil",
+  "region": "Rondonia",
+  "area_km2": 486.757,
+  "ndvi_change_mean": -0.0452,
+  "forest_loss_sqkm": 87.269,
+  "percentage_loss": 22.96,
+  "fraud_risk_score": 0.45,
+  "risk_level": "Medium",
+  "signals": {
+    "abrupt_change": false,
+    "anomalous_loss": true,
+    "suspicious_regularization": false,
+    "planned_clearing": true
+  },
+  "biomass_before": 24.76251067681041,
+  "biomass_after": 23.273165547152285,
+  "biomass_change": -1.4893451296581262,
+  "anomaly_status": "ANOMALY",
+  "anomaly_score": -0.7484921358306084
+}

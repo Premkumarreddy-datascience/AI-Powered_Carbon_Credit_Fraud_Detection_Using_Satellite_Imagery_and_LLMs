@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_eb4ce564e4166d0b93725b12385e7044 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_eb4ce564e4166d0b93725b12385e7044" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_eb4ce564e4166d0b93725b12385e7044 = L.map(
+                "map_eb4ce564e4166d0b93725b12385e7044",
+                {
+                    center: [-10.200004741429654, -62.099999999999724],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_29e6a5c1b780ad24ac6d7146964c5932 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_29e6a5c1b780ad24ac6d7146964c5932.addTo(map_eb4ce564e4166d0b93725b12385e7044);
+        
+    
+        function geo_json_f1dc80e03b1d995a02b09970e8cacb99_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fill": false, "weight": 4};
+            }
+        }
+
+        function geo_json_f1dc80e03b1d995a02b09970e8cacb99_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f1dc80e03b1d995a02b09970e8cacb99 = L.geoJson(null, {
+                onEachFeature: geo_json_f1dc80e03b1d995a02b09970e8cacb99_onEachFeature,
+            
+                style: geo_json_f1dc80e03b1d995a02b09970e8cacb99_styler,
+            ...{
+}
+        });
+
+        function geo_json_f1dc80e03b1d995a02b09970e8cacb99_add (data) {
+            geo_json_f1dc80e03b1d995a02b09970e8cacb99
+                .addData(data);
+        }
+            geo_json_f1dc80e03b1d995a02b09970e8cacb99_add({"features": [{"geometry": {"coordinates": [[[-62.2, -10.3], [-62, -10.3], [-62, -10.1], [-62.2, -10.1], [-62.2, -10.3]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f1dc80e03b1d995a02b09970e8cacb99.addTo(map_eb4ce564e4166d0b93725b12385e7044);
+        
+    
+            var tile_layer_e58584d0760d913b1cd349939d622ccd = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/10126bcc294aa80466c37f44316e66eb-aacc658a90bef94cb27c8e20f68782d3/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_3ed33f4bea555e41d3d25381e066a054 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/a9f7fc10b77913a9118138cf3c05c284-3fd6ce206229c8e3daf0c187dfd28219/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_ebe0b9c88842089f5afec0c8dabaac05 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/5b5a6997a7359ade29c5143f5bea81dd-432b0b207298cfb73cbdcc54f114909b/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_7503c08e7ba14eb983c218cb161e98d0 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/1ab2c31e4df159dd90824a0a86dffbe0-5a028c45500b0e2588610dbc36f73e86/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_4bd8519362265daeda9846254a614a1f = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/876d09f4ad9a9561de1591c80e2ba0a1-f68e19d7c075556eb59e68f25b76e307/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_cae506d116cfc64b3b63f5e21b02e7d6 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/70009a2cffb243c4e21cda9273caeae4-81106a47b31e095e1c9c8eae666f3c3c/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_5c234a9109862a31cc13ba1e9682bcb9 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/490f822ce405cee4b92477e0a01f65a5-d54f243b6b4ab156a8d1d68e009fe826/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_2bac21d86f7ad4edefd16ca45b89ad96 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/0a7d25c3598b23a7167542dbb4a03ae2-5e1cc6cc14acbafe347f1e217afe7e67/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_b996fa3a038166efafe99db575b46e49 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/67ec62e18f660863bd6764f6cf43d82b-ed9e9c73a9f595c9fea65c106756a8f7/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_0cbe279b03d60104c6e17fb7c6e04752 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/4bc98dde571b7a6ee4a5171fdb6f20b0-c208fd0ffabbf5b7ece70734a59ed16a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_00c79a8bc2a146f0a0ce6b231cd76def = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/836465113a34ad6c4bd4dfe06bd13b06-cf2bbd38fa87697a742177ded89f410a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_d7679c0a1b1c41db6b2f2ecc5f9f8cc4 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/carbon-credit-fraud-detection/maps/eacba437cbd317f06828bc81bba65ea7-fb76d118249f879b77e29b19ca2fb529/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var layer_control_4236e955dfad82fd70e3b60a19807cde_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_29e6a5c1b780ad24ac6d7146964c5932,
+                },
+                overlays :  {
+                    "AOI Boundary" : geo_json_f1dc80e03b1d995a02b09970e8cacb99,
+                    "NDVI Before" : tile_layer_e58584d0760d913b1cd349939d622ccd,
+                    "NDVI After" : tile_layer_3ed33f4bea555e41d3d25381e066a054,
+                    "NDVI Change" : tile_layer_ebe0b9c88842089f5afec0c8dabaac05,
+                    "EVI Before" : tile_layer_7503c08e7ba14eb983c218cb161e98d0,
+                    "EVI After" : tile_layer_4bd8519362265daeda9846254a614a1f,
+                    "EVI Change" : tile_layer_cae506d116cfc64b3b63f5e21b02e7d6,
+                    "NDWI Before" : tile_layer_5c234a9109862a31cc13ba1e9682bcb9,
+                    "NDWI After" : tile_layer_2bac21d86f7ad4edefd16ca45b89ad96,
+                    "NDWI Change" : tile_layer_b996fa3a038166efafe99db575b46e49,
+                    "Forest Before" : tile_layer_0cbe279b03d60104c6e17fb7c6e04752,
+                    "Forest After" : tile_layer_00c79a8bc2a146f0a0ce6b231cd76def,
+                    "Forest Change" : tile_layer_d7679c0a1b1c41db6b2f2ecc5f9f8cc4,
+                },
+            };
+            let layer_control_4236e955dfad82fd70e3b60a19807cde = L.control.layers(
+                layer_control_4236e955dfad82fd70e3b60a19807cde_layers.base_layers,
+                layer_control_4236e955dfad82fd70e3b60a19807cde_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_eb4ce564e4166d0b93725b12385e7044);
+
+        
+</script>
+</html>

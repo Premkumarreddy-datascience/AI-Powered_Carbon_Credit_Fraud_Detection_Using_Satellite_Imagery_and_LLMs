@@ -1,0 +1,182 @@
+
+    ================================================================================
+            AI-POWERED CARBON CREDIT FRAUD DETECTION REPORT
+    ================================================================================
+
+    ANALYSIS METADATA
+    --------------------------------------------------------------------------------
+    Analysis Date & Time : 2026-05-04 21:13:44
+    Country              : Brazil
+    State / Region       : Rondonia
+    Selected Years       : 2019 vs 2022
+
+    AREA OF INTEREST (AOI)
+    --------------------------------------------------------------------------------
+    Bounding Box:
+    Min Longitude : -62.2
+    Min Latitude  : -10.3
+    Max Longitude : -62.0
+    Max Latitude  : -10.1
+
+    Area:
+    Square Meters        : 486,757,349.18
+    Square Kilometers    : 486.757
+    Hectares             : 48,675.70
+
+    SATELLITE DATA QUALITY
+    --------------------------------------------------------------------------------
+    Year 2019:
+    Images available     : N/A
+    Cloud coverage       : N/A
+
+    Year 2022:
+    Images available     : N/A
+    Cloud coverage       : N/A
+
+    ================================================================================
+    VEGETATION INDICES ANALYSIS
+    ================================================================================
+
+    BASIC INDICES
+    --------------------------------------------------------------------------------
+    NDVI Before            : Mean=0.5445, Min=-0.2106, Max=0.8959
+    NDVI After             : Mean=0.4993, Min=-0.0929, Max=0.8750
+    NDVI Change            : -0.0452
+
+    EVI Before             : Mean=1.3355, Min=-15.2857, Max=62.9545
+    EVI After              : Mean=1.3534, Min=-271.0714, Max=238.1250
+
+    NDWI Before            : Mean=-0.5736, Min=-0.7996, Max=0.2664
+    NDWI After             : Mean=-0.5360, Min=-0.7683, Max=0.1897
+
+    ADVANCED INDICES
+    --------------------------------------------------------------------------------
+    SAVI Before            : Not computed
+    SAVI After             : Not computed
+
+    MSAVI2 Before          : Not computed
+    MSAVI2 After           : Not computed
+
+    NDMI Before            : Not computed
+    NDMI After             : Not computed
+
+    NBR Before             : Not computed
+    NBR After              : Not computed
+
+    Red Edge NDVI Before   : Not computed
+    Red Edge NDVI After    : Not computed
+
+    Red Edge Position Before : Not computed
+    Red Edge Position After  : Not computed
+
+    ================================================================================
+    FOREST COVER ANALYSIS
+    ================================================================================
+
+    Forest Area:
+    Before (2019)      : 380.107 sq km (38010.70 hectares)
+    After  (2022)       : 292.838 sq km (29283.80 hectares)
+
+    Forest Change:
+    Absolute Change       : +87.269 sq km
+    Percentage Change     : +22.96%
+
+    Forest Pixels:
+    Before                : N/A pixels
+    After                 : N/A pixels
+
+    ================================================================================
+    BIOMASS ESTIMATION (ML MODEL)
+    ================================================================================
+
+    Model Used              : Random Forest
+
+    Model Performance (Test Set):
+    R² Score              : 0.5087
+    RMSE                  : 67.82 Mg/ha
+    MAE                   : 43.63 Mg/ha
+
+    Estimated Biomass:
+    Before (2019)      : 24.76 Mg/ha
+    After  (2022)       : 23.27 Mg/ha
+    Change                 : -1.49 Mg/ha
+
+    Total Carbon Stock (estimated):
+    Before                 : 6026.66 tonnes C
+    After                  : 5664.19 tonnes C
+    (using 0.5 conversion factor)
+
+    ================================================================================
+    ANOMALY DETECTION
+    ================================================================================
+
+    Model                   : Isolation Forest
+
+    Configuration:
+    Contamination         : 0.05
+    Estimators            : 100
+
+    Results:
+    Status                : ANOMALY
+    Anomaly Score         : -0.7485
+    Interpretation        : This project shows unusual patterns that warrant investigation
+
+    ================================================================================
+    FRAUD RISK ASSESSMENT
+    ================================================================================
+
+    Risk Score              : 0.45/1.0
+    Risk Level              : Medium
+    Confidence              : 55.0%
+
+    Signals Triggered:
+    --------------------------------------------------------------------------------
+    Abrupt Change         : No
+    Anomalous Loss        : Yes
+    Suspicious Regularization : No
+    Planned Clearing      : Yes
+
+    Signal Definitions:
+    --------------------------------------------------------------------------------
+    • Abrupt Change        : Sudden NDVI drop > 0.15 (possible deforestation)
+    • Anomalous Loss       : Forest loss > 1.0 km² (unusual area)
+    • Suspicious Regularization : |NDVI change| > 0.3 (too perfect patterns)
+    • Planned Clearing     : Forest loss > 2.0 km² (large-scale)
+
+    ================================================================================
+    RECOMMENDATIONS
+    ================================================================================
+
+    MEDIUM RISK: Monitor closely
+    • Some fraud signals detected
+    • Recommend quarterly monitoring
+    • Compare with neighboring areas
+    • Check historical patterns for context
+    
+    ANOMALY DETECTED: Statistical outlier
+    • This project shows unusual patterns compared to training data
+    • Review feature contributions to understand why
+    • Consider if natural variation or potential issue
+
+    ================================================================================
+    TECHNICAL SUMMARY
+    ================================================================================
+
+    ML Models Used:
+    • Biomass Estimation  : Random Forest
+    • Anomaly Detection   : Isolation Forest
+
+    Data Sources:
+    • Satellite           : Sentinel-2 (10m resolution)
+    • Training Data       : GEDI LiDAR biomass samples
+    • Administrative      : FAO GAUL 2015
+
+    Processing:
+    • Cloud Filter        : <10% cloud cover
+    • Seasonal Window     : June-September
+    • Resolution          : 10m (bands), 100m (statistics)
+
+    ================================================================================
+    Report Generated by AI-Powered Carbon Credit Fraud Detection System
+    ================================================================================
+    

@@ -1,0 +1,31 @@
+======================================================================
+ANOMALY DETECTOR TRAINING SUMMARY
+======================================================================
+
+DATASET SUMMARY:
+--------------------------------------------------
+Total samples: 17669
+Features: 27
+
+MODEL PARAMETERS:
+--------------------------------------------------
+n_estimators: 100
+max_samples: auto
+contamination: 0.05
+bootstrap: False
+random_state: 42
+
+TRAINING RESULTS:
+--------------------------------------------------
+Normal samples: 16785 (95.00%)
+Anomalies detected: 884 (5.00%)
+Threshold: -0.5375
+
+RANDOM STATE TEST RESULTS:
+--------------------------------------------------
+Mean anomaly rate: 5.00%
+Std anomaly rate: 0.00%
+Min anomaly rate: 5.00%
+Max anomaly rate: 5.00%
+
+======================================================================
